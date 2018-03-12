@@ -38,10 +38,10 @@ def reformat_languages(languages)
   languages.each do |style, lang_data|
     lang_data.each do |name, type_data|
       type_data.each do |k,v|
-        new_hash[name] = {k => v}
         binding.pry 
         if new_hash[name].keys.include?(:style)
           binding.pry
+          new_hash[name] = {k => v}
           new_hash[name][:style] << style 
         else
           new_hash[name][:style] = [style] 
