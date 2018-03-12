@@ -38,7 +38,7 @@ def reformat_languages(languages)
   languages.each do |style, lang_data|
     lang_data.each do |name, type_data|
       type_data.each do |k,v|
-        new_hash[name] = {k => v}
+        new_hash[name] = {k => v} unless new_hash[name]
         # binding.pry 
         if new_hash[name].keys.include?(:style)
           binding.pry
