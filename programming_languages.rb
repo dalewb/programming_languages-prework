@@ -50,7 +50,7 @@ def reformat_languages(languages)
       end
     end 
   end 
-  print new_hash
+  new_hash
 end
 
 reformat_languages(languages)
